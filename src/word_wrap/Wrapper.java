@@ -13,20 +13,18 @@ public class Wrapper {
     }
 
     private String wrap(String s) {
-        if (s.length() <= col) {
+        if (s.length() <= col)
             return s;
-        }
         int space = s.substring(0, col).lastIndexOf(' ');
-        if (space != -1) {
+        if (space != -1)
             return breakLine(s, space, 1);
-        } else if (s.charAt(col) == ' ') {
+        if (s.charAt(col) == ' ')
             return breakLine(s, col, 1);
-        } else {
+        else
             return breakLine(s, col, 0);
-        }
     }
 
-    private String breakLine(String s, int pos, int gap) {
-        return (s.substring(0, pos) + "\n" + wrap(s.substring(pos + gap), col));
+    private String breakLine(String s, int space, int gap) {
+        return s.substring(0, space) + "\n" + wrap(s.substring(space + gap), col);
     }
 }
