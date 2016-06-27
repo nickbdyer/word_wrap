@@ -21,4 +21,9 @@ public class WrapperTest {
         assertEquals("another", Wrapper.wrap("another", 9));
     }
 
+    @Test
+    public void wrapsOneWord() {
+        assertEquals("wo\nrd", Wrapper.wrap("word", 2));
+    }
+
 }
