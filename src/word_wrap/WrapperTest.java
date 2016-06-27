@@ -35,4 +35,9 @@ public class WrapperTest {
     public void wrapsYetAnotherFourLetterWord() {
         assertEquals("fi\nve", Wrapper.wrap("five", 2));
     }
+
+    @Test
+    public void doesNotWrapFourWithColumn7() {
+        assertEquals("four", Wrapper.wrap("four", 7));
+    }
 }
