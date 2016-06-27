@@ -26,4 +26,9 @@ public class WrapperTest {
         assertEquals("wo\nrd", Wrapper.wrap("word", 2));
     }
 
+    @Test
+    public void wrapsAnotherFourLetterWord() {
+        assertEquals("fo\nur", Wrapper.wrap("four", 2));
+    }
+
 }
