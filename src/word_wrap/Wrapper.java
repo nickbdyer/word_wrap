@@ -5,8 +5,8 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 public class Wrapper {
 
     public static String wrap(String s, int column) {
-        if ("another".equals(s)) {
-            return "another";
+        if (s.equals(s)) {
+            return s;
         }
         if ("".equals(s)) {
             return "";
