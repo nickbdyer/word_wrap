@@ -16,4 +16,9 @@ public class WrapperTest {
         assertEquals("word", Wrapper.wrap("word", 7));
     }
 
+    @Test
+    public void anotherWordShorterThanWrapColumn() {
+        assertEquals("another", Wrapper.wrap("another", 9));
+    }
+
 }
