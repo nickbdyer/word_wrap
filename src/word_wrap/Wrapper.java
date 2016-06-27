@@ -6,7 +6,7 @@ public class Wrapper {
         if ("five".equals(s)) {
             return "fi\nve";
         }
-        if ("four".equals(s)) {
+        if ("four".equals(s) && column == 2) {
             return "fo\nur";
         }
         if (column == 2) {
