@@ -40,4 +40,9 @@ public class WrapperTest {
     public void doesNotWrapFourWithColumn7() {
         assertEquals("four", Wrapper.wrap("four", 7));
     }
+
+    @Test
+    public void doesNotWrapFiveWithColumn7() {
+        assertEquals("five", Wrapper.wrap("five", 7));
+    }
 }
