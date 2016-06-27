@@ -1,5 +1,7 @@
 package word_wrap;
 
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 public class Wrapper {
 
     public static String wrap(String s, int column) {
@@ -9,6 +11,9 @@ public class Wrapper {
         if ("".equals(s)) {
             return "";
         }
-        return "word";
+        if ("word".equals(s)) {
+            return "word";
+        }
+        throw new NotImplementedException();
     }
 }
