@@ -71,4 +71,9 @@ public class WrapperTest {
     public void wrapsLongerWordWithColumn6() {
         assertEquals("fourte\nen", Wrapper.wrap("fourteen", 6));
     }
+
+    @Test
+    public void wrapsLongerWordWithColumn7() {
+        assertEquals("fourtee\nn", Wrapper.wrap("fourteen", 7));
+    }
 }
