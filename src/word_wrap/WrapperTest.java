@@ -57,6 +57,11 @@ public class WrapperTest {
     }
 
     @Test
+    public void wrapsOneWordWithColumn4() {
+        assertEquals("word\n", Wrapper.wrap("word", 4));
+    }
+
+    @Test
     public void wrapsAnotherFourLetterWordWithColumn4() {
         assertEquals("four\n", Wrapper.wrap("four", 4));
     }
