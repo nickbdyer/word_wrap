@@ -24,6 +24,6 @@ public class Wrapper {
     }
 
     private String breakLine(String s, int space, int gap) {
-        return s.substring(0, space) + "\n" + wrap(s.substring(space + gap, s.length()), column);
+        return s.substring(0, space) + "\n" + wrap(s.substring(space + gap), column);
     }
 }
