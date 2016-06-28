@@ -7,7 +7,7 @@ public class Wrapper {
             return s.substring(0, column) + "\n" + s.substring(column, 4);
         }
         if (column == 4) {
-            return "four\nteen";
+            return s.substring(0, column) + "\n" + s.substring(column, 8);
         }
         if (column == 5) {
             return "fourt\neen";
