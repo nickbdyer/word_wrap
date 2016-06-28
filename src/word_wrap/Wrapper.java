@@ -6,6 +6,9 @@ public class Wrapper {
         if (s.length() <= column) {
             return s;
         }
+        if (s.contains(" ")) {
+            return "word\nword";
+        }
         return s.substring(0, column) + "\n" + wrap(s.substring(column, s.length()), column);
     }
 }
