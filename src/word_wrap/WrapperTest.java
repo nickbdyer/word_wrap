@@ -112,4 +112,9 @@ public class WrapperTest {
         assertEquals("wor\nd\nwor\nd", Wrapper.wrap("word word", 3));
     }
 
+    @Test
+    public void wrapsAfterWordBoundary() {
+        assertEquals("word\nword", Wrapper.wrap("word word", 6));
+    }
+
 }
