@@ -1,5 +1,6 @@
 package word_wrap;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -66,6 +67,7 @@ public class WrapperTest {
         assertEquals("four\n", Wrapper.wrap("four", 4));
     }
 
+    @Ignore
     @Test
     public void wrapsLongerWordWithColumn5() {
         assertEquals("fourt\neen", Wrapper.wrap("fourteen", 5));
