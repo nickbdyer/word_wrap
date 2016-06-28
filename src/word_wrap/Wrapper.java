@@ -2,6 +2,12 @@ package word_wrap;
 
 public class Wrapper {
 
+    private int column;
+
+    public Wrapper(int column) {
+        this.column = column;
+    }
+
     public static String wrap(String s, int column) {
         if (s.length() <= column) {
             return s;
