@@ -11,9 +11,6 @@ public class Wrapper {
         if (column > 1) {
             return s.substring(0, column) + "\n" + s.substring(column, s.length());
         }
-        if (column > 3) {
-            return s.substring(0, column) + "\n" + s.substring(column, s.length());
-        }
         throw new NotImplementedException();
     }
 }
