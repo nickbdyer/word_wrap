@@ -9,6 +9,10 @@ public class Wrapper {
     }
 
     public static String wrap(String s, int column) {
+        return new Wrapper(column).wrap(s);
+    }
+
+    private String wrap(String s) {
         if (s.length() <= column) {
             return s;
         }
