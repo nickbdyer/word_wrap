@@ -6,13 +6,7 @@ public class Wrapper {
         if (column > 1 && column < 4) {
             return s.substring(0, column) + "\n" + s.substring(column, 4);
         }
-        if (column == 4) {
-            return s.substring(0, column) + "\n" + s.substring(column, 8);
-        }
-        if (column == 5) {
-            return s.substring(0, column) + "\n" + s.substring(column, 8);
-        }
-        if (column == 6) {
+        if (column == 4 || column == 5 || column == 6) {
             return s.substring(0, column) + "\n" + s.substring(column, 8);
         }
         return s;
