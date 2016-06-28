@@ -20,7 +20,7 @@ public class Wrapper {
         if (space != -1) {
             return breakLine(s, space, 1);
         }
-        return s.substring(0, column) + "\n" + wrap(s.substring(column, s.length()), column);
+        return breakLine(s, column, 0);
     }
 
     private String breakLine(String s, int space, int gap) {
