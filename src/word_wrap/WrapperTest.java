@@ -101,5 +101,10 @@ public class WrapperTest {
     public void wrapsOnLastWordBoundary() {
         assertEquals("five five\nfive", Wrapper.wrap("five five five", 10));
     }
+    
+    @Test
+    public void wrapsExactlyOnWordBoundary() {
+        assertEquals("word\nword", Wrapper.wrap("word word", 4));
+    }
 
 }
