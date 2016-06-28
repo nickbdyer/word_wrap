@@ -77,7 +77,6 @@ public class WrapperTest {
         assertEquals("fourtee\nn", Wrapper.wrap("fourteen", 7));
     }
 
-    @Ignore
     @Test
     public void wrapsLongWordMultipleTimes() {
         assertEquals("abc\ndef\nghi\nj", Wrapper.wrap("abcdefghij", 3));
