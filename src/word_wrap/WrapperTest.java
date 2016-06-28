@@ -45,4 +45,9 @@ public class WrapperTest {
     public void doesNotWrapFiveWithColumn7() {
         assertEquals("five", Wrapper.wrap("five", 7));
     }
+
+    @Test
+    public void wrapsOneWordWithColumn3() {
+        assertEquals("wor\nd", Wrapper.wrap("word", 3));
+    }
 }
