@@ -92,4 +92,14 @@ public class WrapperTest {
         assertEquals("five\nfive", Wrapper.wrap("five five", 5));
     }
 
+    @Test
+    public void wrapsOnMultipleWordBoundary() {
+        assertEquals("five\nfive\nfive", Wrapper.wrap("five five five", 5));
+    }
+
+    @Test
+    public void wrapsOnLastWordBoundary() {
+        assertEquals("five five\nfive", Wrapper.wrap("five five five", 10));
+    }
+
 }
