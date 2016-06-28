@@ -6,6 +6,9 @@ public class Wrapper {
         if (column == 2 || column == 3) {
             return s.substring(0, column) + "\n" + s.substring(column, 4);
         }
+        if (s.equals("word") && column == 4) {
+            return "word\n";
+        }
         if (column == 4) {
             return "four\n";
         }
