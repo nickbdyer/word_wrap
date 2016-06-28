@@ -8,10 +8,10 @@ public class Wrapper {
         if (s.length() < column) {
             return s;
         }
-        if (column > 1 && column < s.length()) {
+        if (column > 1) {
             return s.substring(0, column) + "\n" + s.substring(column, s.length());
         }
-        if (column > 3 && column < s.length()) {
+        if (column > 3) {
             return s.substring(0, column) + "\n" + s.substring(column, s.length());
         }
         throw new NotImplementedException();
