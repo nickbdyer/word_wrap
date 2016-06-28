@@ -107,4 +107,9 @@ public class WrapperTest {
         assertEquals("word\nword", Wrapper.wrap("word word", 4));
     }
 
+    @Test
+    public void wrapsBeforeWordBoundary() {
+        assertEquals("wor\nd\nwor\nd", Wrapper.wrap("word word", 3));
+    }
+
 }
