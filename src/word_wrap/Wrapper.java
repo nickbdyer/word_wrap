@@ -6,7 +6,7 @@ public class Wrapper {
         if (s.length() <= column) {
             return s;
         }
-        int space = s.substring(0, column).lastIndexOf(' ');
+        int space = s.substring(0, column + 1).lastIndexOf(' ');
         if (space != -1) {
             return s.substring(0, space) + "\n" + wrap(s.substring(space + 1, s.length()), column);
         }
