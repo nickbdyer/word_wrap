@@ -82,4 +82,9 @@ public class WrapperTest {
         assertEquals("abc\ndef\nghi\nj", Wrapper.wrap("abcdefghij", 3));
     }
 
+    @Test
+    public void wrapsOnWordBoundary() {
+        assertEquals("word\nword", Wrapper.wrap("word word", 5));
+    }
+
 }
