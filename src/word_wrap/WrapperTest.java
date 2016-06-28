@@ -14,7 +14,7 @@ public class WrapperTest {
 
     @Test
     public void wordShorterThanWrapColumn() {
-        assertEquals("word", Wrapper.wrap("word", 7));
+        assertEquals("word", Wrapper.wrap("word", 8));
     }
 
     @Test
@@ -39,12 +39,12 @@ public class WrapperTest {
 
     @Test
     public void doesNotWrapFourWithColumn7() {
-        assertEquals("four", Wrapper.wrap("four", 7));
+        assertEquals("four", Wrapper.wrap("four", 8));
     }
 
     @Test
     public void doesNotWrapFiveWithColumn7() {
-        assertEquals("five", Wrapper.wrap("five", 7));
+        assertEquals("five", Wrapper.wrap("five", 8));
     }
 
     @Test
