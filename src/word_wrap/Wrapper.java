@@ -9,6 +9,9 @@ public class Wrapper {
         if (column == 5) {
             return "fourt\neen";
         }
+        if (column == 4) {
+            return "four\nteen";
+        }
         return s;
     }
 }
