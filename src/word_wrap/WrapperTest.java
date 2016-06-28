@@ -87,4 +87,9 @@ public class WrapperTest {
         assertEquals("word\nword", Wrapper.wrap("word word", 5));
     }
 
+    @Test
+    public void wrapsOnAnotherWordBoundary() {
+        assertEquals("five\nfive", Wrapper.wrap("five five", 5));
+    }
+
 }
