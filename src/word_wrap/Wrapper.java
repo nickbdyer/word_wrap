@@ -7,7 +7,7 @@ public class Wrapper {
             return s;
         }
         if (s.contains(" ")) {
-            return "word\nword";
+            return s.replace(' ', '\n');
         }
         return s.substring(0, column) + "\n" + wrap(s.substring(column, s.length()), column);
     }
