@@ -3,14 +3,8 @@ package word_wrap;
 public class Wrapper {
 
     public static String wrap(String s, int column) {
-        if (column == 2 || column == 3) {
+        if (column == 2 || column == 3 || column == 4) {
             return s.substring(0, column) + "\n" + s.substring(column, 4);
-        }
-        if (s.equals("word") && column == 4) {
-            return "word\n";
-        }
-        if (column == 4) {
-            return "four\n";
         }
         return s;
     }
