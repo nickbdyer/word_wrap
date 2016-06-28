@@ -1,16 +1,11 @@
 package word_wrap;
 
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
 public class Wrapper {
 
     public static String wrap(String s, int column) {
         if (s.length() < column) {
             return s;
         }
-        if (column > 1) {
-            return s.substring(0, column) + "\n" + s.substring(column, s.length());
-        }
-        throw new NotImplementedException();
+        return s.substring(0, column) + "\n" + s.substring(column, s.length());
     }
 }
