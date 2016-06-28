@@ -10,10 +10,10 @@ public class Wrapper {
             return s.substring(0, column) + "\n" + s.substring(column, 8);
         }
         if (column == 5) {
-            return "fourt\neen";
+            return s.substring(0, column) + "\n" + s.substring(column, 8);
         }
         if (column == 6) {
-            return "fourte\nen";
+            return s.substring(0, column) + "\n" + s.substring(column, 8);
         }
         return s;
     }
