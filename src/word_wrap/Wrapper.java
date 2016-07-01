@@ -2,10 +2,28 @@ package word_wrap;
 
 public class Wrapper {
 
+    private int column;
+
+    public Wrapper(int column) {
+        this.column = column;
+    }
+
     public static String wrap(String s, int column) {
-        if (column == 2) {
-            return s.substring(0, 2) + "\n" + s.substring(2, 4);
+        return new Wrapper(column).wrap(s);
+    }
+
+    private String wrap(String s) {
+        if (s.length() <= column) {
+            return s;
         }
-        return s;
+        int space = s.substring(0, column + 1).lastIndexOf(' ');
+        if (space != -1) {
+            return breakLine(s, space, 1);
+        }
+        return breakLine(s, column, 0);
+    }
+
+    private String breakLine(String s, int space, int gap) {
+        return s.substring(0, space) + "\n" + wrap(s.substring(space + gap), column);
     }
 }

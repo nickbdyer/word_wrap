@@ -1,5 +1,6 @@
 package word_wrap;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -13,7 +14,7 @@ public class WrapperTest {
 
     @Test
     public void wordShorterThanWrapColumn() {
-        assertEquals("word", Wrapper.wrap("word", 7));
+        assertEquals("word", Wrapper.wrap("word", 8));
     }
 
     @Test
@@ -38,11 +39,82 @@ public class WrapperTest {
 
     @Test
     public void doesNotWrapFourWithColumn7() {
-        assertEquals("four", Wrapper.wrap("four", 7));
+        assertEquals("four", Wrapper.wrap("four", 8));
     }
 
     @Test
     public void doesNotWrapFiveWithColumn7() {
-        assertEquals("five", Wrapper.wrap("five", 7));
+        assertEquals("five", Wrapper.wrap("five", 8));
     }
+
+    @Test
+    public void wrapsOneWordWithColumn3() {
+        assertEquals("wor\nd", Wrapper.wrap("word", 3));
+    }
+
+    @Test
+    public void wrapsAnotherFourLetterWordWithColumn3() {
+        assertEquals("fou\nr", Wrapper.wrap("four", 3));
+    }
+
+    @Test
+    public void wrapsLongerWordWithColumn4() {
+        assertEquals("four\nteen", Wrapper.wrap("fourteen", 4));
+    }
+
+    @Test
+    public void wrapsLongerWordWithColumn5() {
+        assertEquals("fourt\neen", Wrapper.wrap("fourteen", 5));
+    }
+
+    @Test
+    public void wrapsLongerWordWithColumn6() {
+        assertEquals("fourte\nen", Wrapper.wrap("fourteen", 6));
+    }
+
+    @Test
+    public void wrapsLongerWordWithColumn7() {
+        assertEquals("fourtee\nn", Wrapper.wrap("fourteen", 7));
+    }
+
+    @Test
+    public void wrapsLongWordMultipleTimes() {
+        assertEquals("abc\ndef\nghi\nj", Wrapper.wrap("abcdefghij", 3));
+    }
+
+    @Test
+    public void wrapsOnWordBoundary() {
+        assertEquals("word\nword", Wrapper.wrap("word word", 5));
+    }
+
+    @Test
+    public void wrapsOnAnotherWordBoundary() {
+        assertEquals("five\nfive", Wrapper.wrap("five five", 5));
+    }
+
+    @Test
+    public void wrapsOnMultipleWordBoundary() {
+        assertEquals("five\nfive\nfive", Wrapper.wrap("five five five", 5));
+    }
+
+    @Test
+    public void wrapsOnLastWordBoundary() {
+        assertEquals("five five\nfive", Wrapper.wrap("five five five", 10));
+    }
+    
+    @Test
+    public void wrapsExactlyOnWordBoundary() {
+        assertEquals("word\nword", Wrapper.wrap("word word", 4));
+    }
+
+    @Test
+    public void wrapsBeforeWordBoundary() {
+        assertEquals("wor\nd\nwor\nd", Wrapper.wrap("word word", 3));
+    }
+
+    @Test
+    public void wrapsAfterWordBoundary() {
+        assertEquals("word\nword", Wrapper.wrap("word word", 6));
+    }
+
 }
